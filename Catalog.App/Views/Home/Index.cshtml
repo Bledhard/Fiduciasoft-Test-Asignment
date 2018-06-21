@@ -1,0 +1,23 @@
+﻿@using Catalog.Core
+@{
+    var teams = (List<Team>)ViewData["teams"];
+    var people = (List<Person>)ViewData["people"];
+}
+
+<h1>Our team</h1>
+<div class="container">
+    <div class="row">
+        @foreach (var team in teams)
+        {
+            <div class="col-md-4">
+                <h2>@Html.ActionLink(team.Name, "TeamDetails", "Team", new { teamName = team.Name }, null)</h2>
+                <ul>
+                    @foreach (var person in people.Where(p => p.Team == team))
+                    {
+                        <li>@person.Name</li>
+                    }
+                </ul>
+            </div>
+        }
+    </div>
+</div>
