@@ -1,5 +1,5 @@
 # Fiduciasoft Test Asignment
----
+
 Core project contains model and data service for application which organizes teams of people. This is just a starting point. 
 Feel free to change them as you need. For simplicity data service uses in-memory data. Keep it like this. We don't need persistent between app runs.
 
